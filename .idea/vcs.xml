@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Intent" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/LoginSignup" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/OMR App/Optical-Mark-Recognition-Android" vcs="Git" />
@@ -8,6 +9,7 @@
     <mapping directory="$PROJECT_DIR$/QuizApp" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/RecyclerView" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Scroll" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Weather-app" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/unitcvntr" vcs="Git" />
   </component>
 </project>

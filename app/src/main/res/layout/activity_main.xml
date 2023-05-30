@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="3dp"
     tools:context=".MainActivity">
 
     <ProgressBar
         android:id="@+id/loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -22,12 +23,14 @@
         android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/app_background"
         android:scaleType="centerCrop"
-        android:background="@drawable/app_background"/>
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="68dp" />
 
     <LinearLayout
-        android:layout_width="404dp"
-        android:layout_height="65dp"
+        android:layout_width="346dp"
+        android:layout_height="56dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/cityName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,6 +45,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="389dp"
                 android:layout_height="65dp"
                 android:background="@android:color/transparent"
@@ -49,15 +53,16 @@
                 android:inputType="text"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
-                android:textSize="25sp"
-                android:textStyle="bold" />
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:boxStrokeColor="@android:color/transparent" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="67dp"
-            android:layout_height="50dp"
+            android:id="@+id/search_icon"
+            android:layout_width="47dp"
+            android:layout_height="40dp"
             android:layout_gravity="center"
             app:srcCompat="@drawable/baseline_search_24" />
     </LinearLayout>
@@ -70,7 +75,7 @@
         android:gravity="center"
         android:text="City Name"
         android:textColor="@color/black"
-        android:textSize="34sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,22 +102,25 @@
 
     <ImageView
         android:id="@+id/weather_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="210dp"
+        android:layout_height="164dp"
         android:layout_margin="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/temprature"
-        app:layout_constraintVertical_bias="0.022"
-        app:srcCompat="@drawable/ic_launcher_background" />
+        app:layout_constraintVertical_bias="0.151"
+        android:layout_marginBottom="5dp"
+        app:srcCompat="@drawable/rainy" />
 
     <TextView
-        android:id="@+id/weather_condition"
+        android:id="@+id/condition"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:gravity="center"
         android:text="Condition"
         android:textColor="@color/white"
@@ -120,30 +128,29 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/weather_icon"
-        app:layout_constraintVertical_bias="0.026" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Today's WTF"
         android:gravity="center"
+        android:text="Today's weather"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/weather_RV"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/weather_condition"
+        app:layout_constraintTop_toBottomOf="@+id/condition"
         app:layout_constraintVertical_bias="0.5" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/weather_RV"
-        android:layout_width="414dp"
-        android:layout_height="152dp"
+        android:layout_width="269dp"
+        android:layout_height="48dp"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
