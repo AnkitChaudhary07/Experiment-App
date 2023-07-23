@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                             .addToBackStack("name")
                             .commit();
                 }
-                else { //Profile
+                else {
                     fragmentManager.beginTransaction()
                             .replace(R.id.fragmentContainerView2, Upload_Fragment.class, null)
                             .setReorderingAllowed(true)
